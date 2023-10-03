@@ -1,0 +1,149 @@
+body{
+    overflow-x: hidden;
+}
+.portfolio-flank-left,
+.portfolio-flank-right{
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(41, 41, 41);
+    z-index: 10;
+}
+
+.portfolio-flank-left.animate,
+.portfolio-flank-right.animate{
+    animation: moveflanks 1s forwards 2.5s;
+}
+
+.portfolio-flank-left{
+    left: 0;
+}
+.portfolio-flank-right{
+    right: 0;
+}
+
+@keyframes moveflanks {
+    100% {
+        width: 0%;
+    }
+}
+
+.object {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes dropobjects {
+    0% {
+        opacity: 1;
+        transform: scale(10);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.object1 {
+    top: 193px;
+    right:300px;
+    animation: dropobjects 0.6s forwards 0.2s;
+}
+
+.object2 {
+    top: 100px;
+    left: 3px;
+    animation: dropobjects 0.6s forwards;
+}
+
+.object3 {
+    top: 350px;
+    left: 300px;
+    animation: dropobjects 0.6s forwards 0.4s;
+}
+
+.object4 {
+    bottom: 50px;
+    left: 200px;
+    animation: dropobjects 0.6s forwards 0.5s;
+}
+
+.object5 {
+    bottom: 200px;
+    right: 250px;
+    animation: dropobjects 0.6s forwards 0.3s;
+}
+
+.outerbigcircle{
+    animation: moveoutercircle 0.9s forwards 3.1s;
+}
+.innersmallcircle{
+    animation: moveinnercircle 0.9s forwards 3.5s;
+}
+
+@keyframes moveoutercircle {
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes moveinnercircle {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.portfolio-skills-dividers.animate{
+    animation: moveskillsline 1s forwards 0.2s;
+}
+
+@keyframes moveskillsline {
+    100% {
+        width: 100%;
+    }
+}
+
+.additional-skills-columns.animate{
+    animation: translatetechnologies 0.7s forwards 0.2s;
+}
+
+@keyframes translatetechnologies {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.portfolio-aboutme-roadmap.animate{
+    animation: movetimeline 0.7s forwards 0.2s;
+}
+
+@keyframes movetimeline {
+    100% {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 726px){
+    .animate{
+        animation: none !important;
+    }
+    .portfolio-flank-left,
+    .portfolio-flank-right{
+        display: none;
+    }
+    .portfolio-skills-dividers{
+        width: 100%;
+    }
+    .additional-skills-columns{
+        transform: translateX(0);
+    }
+}
