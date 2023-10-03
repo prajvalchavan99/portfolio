@@ -269,6 +269,7 @@ section {
     display: flex;
     gap: 20px;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .portfolio-project-cards {
@@ -281,6 +282,7 @@ section {
     border-radius: 15px;
     flex-grow: 1;
     flex-basis: 0;
+    max-width: 400px;
 }
 
 .portfolio-project-cards img {
